@@ -1,10 +1,62 @@
 body {
-    background-color: burlywood;
+  background-color: burlywood;
+  display: grid; /* Make body a grid container */
+  /* Define two columns: 20% for text, 80% for image */
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto; /* Rows will size based on content */
+  gap: 0; /* Remove gap for tight side-by-side */
+  margin: 0; /* Remove default body margin */
+  min-height: 100vh; /* Ensure body takes at least full viewport height if needed */
+  overflow-x: hidden; /* Prevent horizontal scroll if content overflows */
 }
 
-footer {
-    background-color:black;
-    color: beige;
-    position: sticky;
-    bottom: 0%;
+
+li {
+    padding-bottom: 20px;
 }
+    
+ul {
+    padding-left: 20px;
+    margin: 5px;
+}
+
+.footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: bisque;
+    padding: 10px;
+    height: auto;
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    z-index: 100;
+}
+
+#odin {
+  grid-column: 2 / 3; /* Placed in the second column */
+  grid-row: 1 / 2; /* Placed in the first row */
+  height: -webkit-fill-available
+  display: block; /* Remove any potential extra space below the image */
+}
+
+.boxtext h1 {
+    font-size: 2.2vw; /* Adjusting this value based on your preference for scaling */
+    margin-left: 5px;
+  }
+  
+  .boxtext li {
+    font-size: 1.1vw; /* Adjusting this value based on your preference for scaling */
+  }
+  
+  /* Media query for very small screens to set a minimum font size */
+  @media (max-width: 480px) { /* Adjust the breakpoint (480px) as needed */
+    .boxtext h1 {
+      font-size: 24px; /* Minimum font size for h1 on small screens */
+    }
+    .boxtext li {
+      font-size: 14px; /* Minimum font size for li on small screens */
+    }
+  }
